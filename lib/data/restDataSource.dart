@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:survey_app/utils/network.dart';
-import 'package:survey_app/models/user.dart';
 
 class RestDataSource {
   // defining constant variables for authentication
