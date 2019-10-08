@@ -5,6 +5,9 @@ import 'dart:ui';
 
 import 'package:survey_app/utils/login_presenter.dart';
 
+import 'package:rich_alert/rich_alert.dart';
+
+
 class LoginPage extends StatefulWidget {
   static final String path = "lib/src/pages/login/login3.dart";
 
@@ -208,6 +211,32 @@ class _LoginPageState extends State<LoginPage> implements LoginScreenContract {
   @override
   void onLoginError(String errorTxt) {
     print(errorTxt);
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return RichAlertDialog( //uses the custom alert dialog
+            alertTitle: richTitle("Fout"),
+            alertSubtitle: richSubtitle("Uw E-mail en/of wachtwoord is verkeerd!"),
+            alertType: RichAlertType.ERROR,
+            actions: <Widget>[
+              RaisedButton(
+                elevation: 2.0,
+                color: Colors.red,
+                shape:  RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(40)),
+                ),
+                child: Text(
+                  "Probeer opnieuw",
+                  style: TextStyle(color: Colors.white),
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          );
+        }
+    );
   }
 
   @override
