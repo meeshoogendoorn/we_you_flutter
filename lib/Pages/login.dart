@@ -3,7 +3,7 @@ import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
 import 'dart:ui';
 
-import 'package:survey_app/utils/login_presenter.dart';
+import 'package:survey_app/utils/loginPresenter.dart';
 
 import 'package:rich_alert/rich_alert.dart';
 
@@ -21,13 +21,14 @@ class _LoginPageState extends State<LoginPage> implements LoginScreenContract {
   bool _autoValidate = false;
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final _debug = true;
 
   _LoginPageState(){
     this._presenter = new LoginScreenPresenter(this);
   }
 
   String emailValidator(String value){
-    String pattern = r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+    const String pattern = r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
     RegExp regExp = new RegExp(pattern);
     if (value.length == 0) {
       return "Email is verplicht";
@@ -144,6 +145,10 @@ class _LoginPageState extends State<LoginPage> implements LoginScreenContract {
                         color: Color(0xFFEA4249),
                         onPressed: () async {
                           //TODO fix authentication with token
+                          if(_debug){
+                            emailController.text = 'admin@example.com';
+                            passwordController.text = 'password';
+                          }
                           _validateInputs();
                         },
                         elevation: 11,
@@ -216,7 +221,7 @@ class _LoginPageState extends State<LoginPage> implements LoginScreenContract {
         builder: (BuildContext context) {
           return RichAlertDialog( //uses the custom alert dialog
             alertTitle: richTitle("Fout"),
-            alertSubtitle: richSubtitle("Uw E-mail en/of wachtwoord is verkeerd!"),
+            alertSubtitle: richSubtitle(errorTxt),
             alertType: RichAlertType.ERROR,
             actions: <Widget>[
               RaisedButton(
