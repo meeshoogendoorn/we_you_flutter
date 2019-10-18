@@ -59,5 +59,23 @@ Used to display an gradient header bar that is changeable on initialize
 
 Package for providing wave animation in the app
 
+### Restful API 
+>API specs
+
+`dependecies`
+python 3.6 django 2.2 rest framework 3.10.3
+
+>API connection with App
+>
+`API -> APP`
+The app is connected to the API to retrieve data and save data to the database of Home4Talent. 
+
+`Authentication`
+The API uses Basic http authentication (Basic Auth). The authentication in the app is handled by 3 classes:
+
+ 1. Pages/login.dart => View
+ 2. Utils/loginPresenter.dart => Presenter
+ 3. Data/restDataSource.dart => Handler
+
 
 
