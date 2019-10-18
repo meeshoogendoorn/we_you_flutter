@@ -1,18 +1,30 @@
-# we_you_flutter
+# we_you_flutter  
 
-This app is created with Flutter.
-Main purpose of the app is handling the quiz sessions for the company Home4Talent.
+This app is created with Flutter.  
+Main purpose of the app is handling the quiz sessions for the company Home4Talent.  
+  
+### Directory Structure   
+```
+├── survey_app
+│   ├── android
+│   ├── assets
+│   │   ├── gifs   
+│   │   ├── images   
+│   ├── build
+│   ├── ios
+│   ├── lib
+│   │   ├── Containers => Data for temporary states
+│   │   ├── Data			 => Handlers for data from REST API
+│   │   ├── Pages			 => Pages for the app
+│   │   ├── Utils            => Contains the Utilities for this app 
+│   │   ├── Widgets     => Widget components
+│   │   ├── main.dart   => root of the app
+│   ├── test
+│   ├── .gitignore
+│   ├── .metadata
+│   ├── .packages
+│   ├── pubspec.yaml => Packages of the app
+```
 
-### Directory Structure
 
 
-``root``
-
-    ``lib``
-
-        ``Containers`` => Contains the data containers and classes to save the data of temporary states
-        ``Data``    => Contains handlers for Data from the Restful API
-        ``Pages``   => Contains the widgets that are used as Pages for the App
-        ``Seeds``   => Contains Seeders to test without connection to the Restful API
-        ``Utils``   => Contains the Utilities for this app to handle the network and that kind of stuff.
-        ``Widgets`` => Contains the Widgets that are used in the pages like answer models etc.
