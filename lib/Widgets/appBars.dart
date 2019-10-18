@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:survey_app/Containers/util.dart';
-import 'package:charts_flutter/flutter.dart';
 import 'package:survey_app/Widgets/chart.dart';
-import 'package:intl/intl.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'chart.dart';
 
@@ -27,7 +25,7 @@ Widget fullAppbar(BuildContext context) {
       actions: <Widget>[
         Container(
           margin: EdgeInsets.fromLTRB(0, 20, 20, 0),
-          child: Image.asset('assets/images/photo.png'),
+          child: Image.asset('assets/images/home4talent_logo.png'),
         ),
       ],
       elevation: 0,

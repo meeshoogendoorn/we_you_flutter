@@ -3,12 +3,13 @@ import 'package:provider/provider.dart';
 
 import 'package:survey_app/Containers/theme.dart';
 import 'package:survey_app/Pages/login.dart';
-import 'package:survey_app/Pages/main_employee.dart';
+import 'package:survey_app/Pages/overview.dart';
+import 'package:survey_app/Pages/submitQuizScreen.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  // Root of the application.
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<ThemeContainer>(
@@ -28,10 +29,11 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
+        // When navigating to the "/" route, Build the LoginScreen widget.
         '/': (context) => LoginPage(),
-        // When navigating to the "/second" route, build the SecondScreen widget.
+        // When navigating to the "/example" route, build the corresponding widget.
         '/main-employee': (context) => (MainEmployee()),
+        '/submit-quiz': (context) => (SubmitQuizScreen())
       },
     );
   }
