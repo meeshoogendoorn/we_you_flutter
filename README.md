@@ -27,37 +27,38 @@ Main purpose of the app is handling the quiz sessions for the company Home4Talen
 ```
 
 ### Packages
->http
+>[http](https://pub.dev/packages/http)
 
 A composable, Future-based library for making HTTP requests.
 
->provider
+>[provider](https://pub.dev/packages/provider)
 
 A mixture between dependency injection (DI) and state management, built with widgets for widgets.
 
->charts_flutter
+>[charts_flutter](https://pub.dev/packages/charts_flutter)
 
 Material Design data visualization library written natively in Dart.
 
->rich_alert
+>[rich_alert](https://pub.dev/packages/rich_alert)
 
 An alert dialog package for the "rich". This package helps you to render an modern alert dialog in your Flutter app
 
->font_awesome
+>[font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
 
 Font Awesome library for flutter
 
->intro_views_flutter
+>[intro_views_flutter](https://pub.dev/packages/intro_views_flutter)
 
 Creating beautiful intro views for flutter
 
->gradient_app_bar
+>[gradient_app_bar](https://pub.dev/packages/gradient_app_bar)
 
 Used to display an gradient header bar that is changeable on initialize
 
->wave
+>[wave](https://pub.dev/packages/wave)
 
 Package for providing wave animation in the app
+
 
 ### Restful API 
 >API specs
